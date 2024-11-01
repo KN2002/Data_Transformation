@@ -389,12 +389,12 @@ head(iris.petal2)</code></pre>
 ## 5          1.4         0.2  setosa
 ## 6          1.7         0.4  setosa</code></pre>
 <pre class="r"><code>#creating the second transformation
-data &lt;- pivot_longer(iris.petal2, 
+data_new &lt;- pivot_longer(iris.petal2, 
                             cols = starts_with(&quot;Petal&quot;), 
                             names_to = &quot;Petal Measurement&quot;, 
                             values_to = &quot;Data points&quot;)
 
-head(data)</code></pre>
+head(data_new)</code></pre>
 <pre><code>## # A tibble: 6 × 3
 ##   Species `Petal Measurement` `Data points`
 ##   &lt;fct&gt;   &lt;chr&gt;                       &lt;dbl&gt;
