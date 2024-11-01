@@ -1,0 +1,26 @@
+---
+title: "transformation_data"
+output: html_document
+date: "2024-11-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+data(iris)
+head(iris)
+
+#transform dataset by removing sepal columns 
+library(dplyr)
+
+iris.petal <- iris %>% select(-Sepal.Length)
+iris.petal2 <- iris.petal %>% select(-Sepal.Width)
+head(iris.petal2)
+
+
+
+```
