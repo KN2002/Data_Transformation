@@ -21,6 +21,14 @@ iris.petal <- iris %>% select(-Sepal.Length)
 iris.petal2 <- iris.petal %>% select(-Sepal.Width)
 head(iris.petal2)
 
+#creating the second transformation
+data <- pivot_longer(iris.petal2, 
+                            cols = starts_with("Petal"), 
+                            names_to = "Petal Measurement", 
+                            values_to = "Data points")
+
+head(data)
+
 
 
 ```
